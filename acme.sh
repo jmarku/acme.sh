@@ -5402,6 +5402,10 @@ renew() {
   fi
 
   _ACME_IS_RENEW="1"
+  $Le_RealCertPath="$(_readdomainconf Le_RealCertPath)"
+  $Le_RealKeyPath="$(_readdomainconf Le_RealKeyPath)"
+  $Le_RealCACertPath="$(_readdomainconf Le_RealCACertPath)"
+  $Le_RealFullChainPath="$(_readdomainconf Le_RealFullChainPath)"
   Le_ReloadCmd="$(_readdomainconf Le_ReloadCmd)"
   Le_PreHook="$(_readdomainconf Le_PreHook)"
   Le_PostHook="$(_readdomainconf Le_PostHook)"
